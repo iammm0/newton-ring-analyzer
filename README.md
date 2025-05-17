@@ -1,7 +1,9 @@
 
 # 🧠 牛顿环识别项目说明文档
 
-本项目基于 PyTorch + OpenCV 实现牛顿环图像中圆环结构的自动识别与参数提取，支持单图、多图、深度模型和传统图像处理方法组合使用。
+本项目基于 `PyTorch` +`OpenCV` 实现牛顿环图像中圆环结构的自动识别与参数提取，支持单图、多图、深度模型和传统图像处理方法组合使用。
+
+建议：`Python` 版本：`3.11.*`
 
 ---
 
@@ -25,6 +27,24 @@
 | 图像分割模型  | PyTorch U-Net         |
 | 圆检测辅助    | Hough变换 + 圆心拟合  |
 | 参数提取      | `cv2.minEnclosingCircle` + 拟合优化 |
+
+进入项目根目录：
+
+```
+cd newton-ring-analyzer
+```
+
+激活虚拟环境：
+
+```
+.\.venv\Scripts\activate  
+```
+
+安装所需第三方库：
+
+```bash
+pip install -r requirements.txt
+```
 
 
 
@@ -197,7 +217,7 @@ fine_tuned_model.pth
 
 ## ✅ 总结
 
-根据任务需求灵活选择：
+根据需求灵活选择：
 - 单图检测 vs 批量检测
 - 模型预测 vs OpenCV圆检测 vs 融合检测
 - 数据增强、掩膜伪生成、微调训练等脚本组件组合
